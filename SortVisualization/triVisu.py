@@ -325,10 +325,10 @@ def whatToDo():
     global size_list
     if pygame.mouse.get_pressed()[0]:
         pos = pygame.mouse.get_pos()
-        if(add[0].collide(pos)):
+        if(add[0].collide(pos) and buttons[0].enable==True):
             size_list=min(size_list+1,800)
             print_size(size_list)
-        if(add[1].collide(pos)):
+        if(add[1].collide(pos) and buttons[0].enable==True):
             size_list-=1
             if(size_list<1):
                 size_list=1
